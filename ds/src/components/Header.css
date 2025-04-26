@@ -1,0 +1,163 @@
+.header {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Top header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 10px;
+}
+
+/* Search */
+.search-container {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* User and Cart */
+.user-cart-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-icon {
+  cursor: pointer;
+}
+
+.cart-icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-home {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item-container {
+  position: relative;
+  margin-right: 5px;
+}
+
+.nav-item {
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.tag {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 10px;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.new-tag {
+  background-color: #3b82f6;
+}
+
+.hot-tag {
+  background-color: #ef4444;
+}
+
+/* Phone */
+.phone-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 40px;
+  background-color: #f5f5f5;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.phone-icon {
+  margin-right: 10px;
+  color: #666;
+}
+
+.phone-number {
+  font-size: 14px;
+  color: #666;
+}
