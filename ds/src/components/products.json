@@ -1,0 +1,121 @@
+{
+  "produitsPhares": [
+    {
+      "title": "Chargeur Lipo solaire (3.7V) DFR0284",
+      "image": "/images/chargeur-lipo.jpg",
+      "price": "20,800 TND",
+      "originalPrice": "25,000 TND"
+    },
+    {
+      "title": "Serrure Electrique DC 24V 300mA",
+      "image": "/images/serrure-electrique.jpg",
+      "price": "18,250 TND",
+      "originalPrice": ""
+    },
+    {
+      "title": "Kit de démarrage d'une ferme intelligente STEM ESP32 (AECBOTT)",
+      "image": "/images/kit-demarrage.png",
+      "price": "470,000 TND",
+      "originalPrice": ""
+    },
+    {
+      "title": "Contrôleur LCD numérique de température PID MT-S",
+      "image": "/images/controleur-lcd.png",
+      "price": "70,000 TND",
+      "originalPrice": ""
+    },
+    {
+      "title": "SUPPORT CAPTEUR ULTRASON HC-SR04",
+      "image": "/images/capteur.jpg",
+      "price": "20,800 TND",
+      "originalPrice": "25,000 TND"
+    },
+    {
+      "title": "Arduino Compatible UART/SPI JPEG Camera Shield",
+      "image": "/images/arduino.jpg",
+      "price": "18,250 TND",
+      "originalPrice": ""
+    },
+    {
+      "title": "4.3 TFT color display 480x272 with touch screen Mikroe",
+      "image": "/images/color.jpg",
+      "price": "470,000 TND",
+      "originalPrice": ""
+    },
+    {
+      "title": "GOBLIN 2 IoT development board",
+      "image": "/images/goblin.jpg",
+      "price": "70,000 TND",
+      "originalPrice": ""
+    }
+  ],
+  "nouveauxProduits": [
+    {
+      "title": "MODULE 8 RELAIS 24V POUR ARDUINO",
+      "image": "/images/module-relais.jpg",
+      "price": "31,000 TND"
+    },
+    {
+      "title": "LAMPE DE TEST D'INCUBATEUR",
+      "image": "/images/lampe-test.png",
+      "price": "18,000 TND"
+    },
+    {
+      "title": "MACHINE DE DÉCOUPE MARBRE BLANC",
+      "image": "/images/machine-decoupe.jpg",
+      "price": "2,400,000 TND"
+    },
+    {
+      "title": "CAPTEUR DE FLAMME POUR ARDUINO",
+      "image": "/images/capteur-flamme.png",
+      "price": "3,600 TND"
+    },
+    {
+      "title": "Alimentation À Découpage 5V 10A",
+      "image": "/images/alimentation.jpg",
+      "price": "3,600 TND"
+    },
+    {
+      "title": "Capteur RedBot - Accéléromètre MMA8452Q",
+      "image": "/images/redbot.jpg",
+      "price": "2,400,000 TND"
+    },
+    {
+      "title": "Accélérateur pour Scooter électrique Xiaomi 4 lite/",
+      "image": "/images/acc.jpg",
+      "price": "18,000 TND"
+    },
+    {
+      "title": "Compteur horaire 6-80V AC/DC 0-99 999 9H SH-1 NOIR",
+      "image": "/images/compteur.jpg",
+      "price": "31,000 TND"
+    }
+  ],
+  "produitsLesPlusVendus": [],
+
+  "articlesALaUne": [
+    {
+      "title": "Support 2 piles AAA pour Micro:bit",
+      "image": "/images/support-piles.jpg",
+      "price": "4,500 TND"
+    },
+    {
+      "title": "Câble d'alimentation JACK DC 5.5/2.1",
+      "image": "/images/cable-alimentation.jpg",
+      "price": "1,150 TND"
+    }
+  ],
+  "meilleursArticles": [
+    {
+      "title": "RÉSISTANCE CARBONE 1/4W 5%",
+      "image": "/images/resistance-carbone.jpg",
+      "price": "0,039 TND"
+    },
+    {
+      "title": "CARTE RFID PROGRAMMABLE 125kHz",
+      "image": "/images/carte-rfid.jpg",
+      "price": "1,150 TND",
+      "originalPrice": "1,360 TND"
+    }
+  ]
+}

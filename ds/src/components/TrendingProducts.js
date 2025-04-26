@@ -1,59 +1,20 @@
-import React from "react";
-import { FaEye, FaShoppingCart, FaHeart } from "react-icons/fa";
+import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import products from "./products.json"; // Adjust the path based on your project structure
 
 const TrendingProducts = () => {
-  // Sample articles data (8 articles for a 2x4 grid)
-  const articles = [
-    {
-      title: "Chargeur Lipo solaire (3.7V) DFR0284",
-      image: "/images/chargeur-lipo.jpg", // Replace with actual image path
-      price: "20,800 TND",
-      originalPrice: "25,000 TND",
-    },
-    {
-      title: "Serrure Electrique DC 24V 300mA",
-      image: "/images/serrure-electrique.jpg", // Replace with actual image path
-      price: "18,250 TND",
-      originalPrice: "",
-    },
-    {
-      title: "Kit de démarrage d'une ferme intelligente STEM ESP32 (AECBOTT)",
-      image: "/images/kit-demarrage.png", // Replace with actual image path
-      price: "470,000 TND",
-      originalPrice: "",
-    },
-    {
-      title: "Contrôleur LCD numérique de température PID MT-S",
-      image: "/images/controleur-lcd.png", // Replace with actual image path
-      price: "70,000 TND",
-      originalPrice: "",
-    },
-    {
-      title: "SUPPORT CAPTEUR ULTRASON HC-SR04",
-      image: "/images/capteur.jpg", // Replace with actual image path
-      price: "20,800 TND",
-      originalPrice: "25,000 TND",
-    },
-    {
-      title: "Arduino Compatible UART/SPI JPEG Camera Shield",
-      image: "/images/arduino.jpg", // Replace with actual image path
-      price: "18,250 TND",
-      originalPrice: "",
-    },
-    {
-      title: "4.3 TFT color display 480x272 with touch screen Mikroe",
-      image: "/images/kit-demarrage.png", // Replace with actual image path
-      price: "470,000 TND",
-      originalPrice: "",
-    },
-    {
-      title: "GOBLIN 2 IoT development board",
-      image: "/images/controleur-lcd.png", // Replace with actual image path
-      price: "70,000 TND",
-      originalPrice: "",
-    },
-  ];
+  // State to manage the active tab
+  const [activeTab, setActiveTab] = useState("Produits Phares");
+
+  // Determine which articles to display based on the active tab
+  const displayedArticles =
+    activeTab === "Produits Phares"
+      ? products.produitsPhares
+      : activeTab === "Nouveaux Produits"
+      ? products.nouveauxProduits
+      : activeTab === "Produits Les Plus Vendus"
+      ? products.produitsLesPlusVendus
+      : products.produitsPhares; // Default to Produits Phares
 
   return (
     <div
@@ -91,21 +52,59 @@ const TrendingProducts = () => {
             position: "relative",
           }}
         >
-          <span style={{ fontSize: "14px", color: "#666" }}>Top Marques</span>
           <span
             style={{
               fontSize: "14px",
-              color: "#000",
-              fontWeight: "bold",
-              borderBottom: "2px solid #000",
+              color: activeTab === "Top Marques" ? "#000" : "#666",
+              fontWeight: activeTab === "Top Marques" ? "bold" : "normal",
+              borderBottom:
+                activeTab === "Top Marques" ? "2px solid #000" : "none",
+              cursor: "pointer",
             }}
+            onClick={() => setActiveTab("Top Marques")}
+          >
+            Top Marques
+          </span>
+          <span
+            style={{
+              fontSize: "14px",
+              color: activeTab === "Produits Phares" ? "#000" : "#666",
+              fontWeight: activeTab === "Produits Phares" ? "bold" : "normal",
+              borderBottom:
+                activeTab === "Produits Phares" ? "2px solid #000" : "none",
+              cursor: "pointer",
+            }}
+            onClick={() => setActiveTab("Produits Phares")}
           >
             Produits Phares
           </span>
-          <span style={{ fontSize: "14px", color: "#666" }}>
+          <span
+            style={{
+              fontSize: "14px",
+              color: activeTab === "Nouveaux Produits" ? "#000" : "#666",
+              fontWeight: activeTab === "Nouveaux Produits" ? "bold" : "normal",
+              borderBottom:
+                activeTab === "Nouveaux Produits" ? "2px solid #000" : "none",
+              cursor: "pointer",
+            }}
+            onClick={() => setActiveTab("Nouveaux Produits")}
+          >
             Nouveaux Produits
           </span>
-          <span style={{ fontSize: "14px", color: "#666" }}>
+          <span
+            style={{
+              fontSize: "14px",
+              color: activeTab === "Produits Les Plus Vendus" ? "#000" : "#666",
+              fontWeight:
+                activeTab === "Produits Les Plus Vendus" ? "bold" : "normal",
+              borderBottom:
+                activeTab === "Produits Les Plus Vendus"
+                  ? "2px solid #000"
+                  : "none",
+              cursor: "pointer",
+            }}
+            onClick={() => setActiveTab("Produits Les Plus Vendus")}
+          >
             Produits Les Plus Vendus
           </span>
           {/* Navigation Arrows */}
@@ -150,7 +149,7 @@ const TrendingProducts = () => {
           gap: "20px", // Gap between articles
         }}
       >
-        {articles.map((article, index) => (
+        {displayedArticles.map((article, index) => (
           <div
             key={index}
             style={{
@@ -163,21 +162,24 @@ const TrendingProducts = () => {
               position: "relative",
             }}
           >
-            {/* Icons */}
-            <div
-              style={{
-                position: "absolute",
-                top: "10px",
-                left: "10px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-              }}
-            >
-              <FaEye size={18} style={{ color: "#666" }} />
-              <FaShoppingCart size={18} style={{ color: "#666" }} />
-              <FaHeart size={18} style={{ color: "#666" }} />
-            </div>
+            {/* "NOUVEAU" Badge for Nouveaux Produits */}
+            {activeTab === "Nouveaux Produits" && (
+              <span
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  left: "10px",
+                  backgroundColor: "#28a745",
+                  color: "#fff",
+                  fontSize: "12px",
+                  padding: "2px 8px",
+                  borderRadius: "3px",
+                  textTransform: "uppercase",
+                }}
+              >
+                NOUVEAU
+              </span>
+            )}
             {/* Image */}
             <img
               src={article.image}
@@ -207,7 +209,7 @@ const TrendingProducts = () => {
             </h3>
             {/* Price */}
             <div style={{ fontSize: "14px", color: "#333" }}>
-              {article.originalPrice && (
+              {activeTab === "Produits Phares" && article.originalPrice && (
                 <span
                   style={{
                     textDecoration: "line-through",
