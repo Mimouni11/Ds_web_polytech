@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaFacebook,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Carousel = () => {
   // Sample articles data (you can expand this)
@@ -75,32 +70,9 @@ const Carousel = () => {
         maxWidth: "1400px",
         margin: "0 auto",
         padding: "20px 20px",
+        marginTop: "40px", // Spacing between header and carousel
       }}
     >
-      {/* Social Media Icons */}
-      <div
-        style={{
-          position: "absolute",
-          left: "-40px",
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 10,
-        }}
-      >
-        <FaFacebook size={30} style={{ color: "#3b5998" }} />
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          right: "-40px",
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 10,
-        }}
-      >
-        <FaWhatsapp size={30} style={{ color: "#25D366" }} />
-      </div>
-
       {/* Carousel Container */}
       <div style={{ position: "relative" }}>
         {/* Left Arrow */}
@@ -137,7 +109,8 @@ const Carousel = () => {
                 maxWidth: "400px",
                 backgroundColor: "#fff",
                 borderRadius: "10px",
-                boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.15)", // Increased shadow intensity
+                border: "1px solid #ddd", // Added subtle border
                 padding: "15px",
                 textAlign: "center",
               }}
